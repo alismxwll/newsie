@@ -3,6 +3,6 @@
 <h1>Slacker News</h1>
 
 <ul><% @links.each do |link| %>
-  <li><%= link.title %></li>
+  <li><%= link_to "#{link.title}", "http://#{link.url}" %></li>
 <% end %>
 </ul>
