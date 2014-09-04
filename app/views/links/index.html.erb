@@ -1,0 +1,8 @@
+<% content_for(:title, "Home Page | Slacker News") %>
+
+<h1>Slacker News</h1>
+
+<ul><% @links.each do |link| %>
+  <li><%= link.title %></li>
+<% end %>
+</ul>
