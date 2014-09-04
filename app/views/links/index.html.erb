@@ -3,6 +3,10 @@
 <h1>Slacker News</h1>
 
 <ul><% @links.each do |link| %>
-  <li><%= link_to "#{link.title}", "http://#{link.url}" %></li>
+  <li><%= link_to "#{link.title}", "http://#{link.url}" %>
+    <div class="index-display">
+      <%= "(#{link.url})" %> | <%= "#{link.vote}" %>
+    </div>
+  </li>
 <% end %>
 </ul>
