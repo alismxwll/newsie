@@ -1,6 +1,7 @@
 class Link < ActiveRecord::Base
+  validates :title, presence: true
+  validates :url, presence: true
+  validates :content, presence: true
 
-  def upvote
-    self.vote = self.vote + 1
-  end
+  scope :recent, -> { order("vote DESC") }
 end
