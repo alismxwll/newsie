@@ -1,8 +1,50 @@
+body {
+  background-color: #D9FFD8;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  margin: 7%;
+  color: #008DA3;
+}
+
+ul  {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1  {
+  text-decoration: underline;
+}
+
+.delete-line {
+  padding-top: 2%;
+}
 /*.form
-
-.btn
 */
+.btn {
+  padding-top: 4%;
+}
 
-/*#nav-bar*/
 
-/*.index-display*/
+#nav-bar {
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+a {
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #008DA3;
+}
+
+.index-display  {
+  font-size: 10px;
+  padding-bottom: 3%;
+  color: #00C8E8;
+}
+
+.txt {
+  padding-top: 100%;
+  padding-bottom: 100%;
+  padding-left: .5%;
+}

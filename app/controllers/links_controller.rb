@@ -11,6 +11,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
+      @link[:vote] = 0
       flash[:notice]="Post created"
       redirect_to link_path(@link)
     else
@@ -39,11 +40,16 @@ class LinksController < ApplicationController
   def destroy
     @link = Link.find(params[:id])
     @link.destroy
-    redirect_to link_path
+    redirect_to root_path
+  end
+
+  def upvote
+    Link.increment_counter(:vote, params[:id])
+    redirect_to root_path
   end
 
   private
   def link_params
-    params.require(:link).permit(:content, :title, :url)
+    params.require(:link).permit(:content, :title, :url, :vote)
   end
 end

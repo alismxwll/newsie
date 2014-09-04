@@ -6,7 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<div id="container">
 <body>
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
   <div id="nav-bar">
     <%= link_to 'Home', root_path %> | <%= link_to 'New Link', new_link_path %>
   </div>
@@ -15,4 +17,5 @@
 <%= flash[:alert] %>
 <%= flash[:notice] %>
 </body>
+</div>
 </html>

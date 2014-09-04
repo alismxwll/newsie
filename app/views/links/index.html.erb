@@ -3,9 +3,9 @@
 <h1>Slacker News</h1>
 
 <ul><% @links.each do |link| %>
-  <li><%= link_to "#{link.title}", "http://#{link.url}" %>
+  <li><%= link_to "- #{link.title} -", "http://#{link.url}" %>
     <div class="index-display">
-      <%= "(#{link.url})" %> | <%= "#{link.vote}" %>
+      <%= "(#{link.url})" %> | <%= link_to "+", upvote_link_path(link.id) %> | <%= "#{link.vote}" %> | <%= link_to "(edit)", edit_link_path(link.id) %>
     </div>
   </li>
 <% end %>
